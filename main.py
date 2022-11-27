@@ -143,6 +143,7 @@ class Tree:
                 arr.append(node.l)
             if node.r:
                 arr.append(node.r)
+        return (arr)
 
 
 def main():
@@ -177,12 +178,12 @@ def main():
         if ((ch>11) or (ch<0)):
             print('Введите корректное значение\n')
         else:
-            """if ch == 1:
+            if ch == 1:
                 try:
                     a = int(input('Введите значение элемента: '))
                 except:
                     print('Введено некорректное значение\n')
-                tree.add(a)"""
+                tree.add(a)
 
             if ch == 2:
                 tree.printTree()
