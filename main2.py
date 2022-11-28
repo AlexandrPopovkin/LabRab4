@@ -4,26 +4,26 @@ class Node:
         self.l  = l
         self.r = r
 
-def postorder(tree):
+def post_order(tree):
     if tree == None:
         return
-    postorder(tree.l)
-    postorder(tree.r)
+    post_order(tree.l)
+    post_order(tree.r)
     print (tree.v)
 
-def inorder(tree):
+def in_order(tree):
     if tree == None:
         return
-    inorder(tree.l)
+    in_order(tree.l)
     print (tree.v)
-    inorder(tree.r)
+    in_order(tree.r)
 
-def preorder(tree):
+def pre_order(tree):
     if tree == None:
         return
     print(tree.v)
-    postorder(tree.l)
-    postorder(tree.r)
+    post_order(tree.l)
+    post_order(tree.r)
 
 
 def get_number(arr):
@@ -81,10 +81,10 @@ def check(arr, s):
 arr = [18,'*','(',13,'-',3,')','*',4,'/','(',10,'-',2,')', 'end']
 tree = sum(arr)
 print('Постфикс: ')
-postorder(tree)
+post_order(tree)
 print('\n')
 print('Инфикс: ')
-inorder(tree)
+in_order(tree)
 print('\n')
 print('Префикс: ')
-preorder(tree)
+pre_order(tree)
